@@ -1,15 +1,16 @@
-const Discord=require('discord.js');
-const Bot=new Discord.Client();
+const Discord = require("discord.js");
+const Bot = new Discord.Client();
 
 Bot.on('ready', () => {
-  console.log("I am ready to du stuff, master");
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
-Bot.on('message', message => {
-  if(message.content == "ping") {
-    message.reply("pong");
+Bot.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
   }
 });
+
 
 
 
